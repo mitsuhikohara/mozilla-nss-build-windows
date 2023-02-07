@@ -1,0 +1,13 @@
+76a77
+>     # link is conflict with /usr/bin/link , so VC path should be earlier in PATH
+78,79c79,80
+<         PATH="${PATH}:${VCINSTALLDIR}/Tools/MSVC/${VCVER}/bin/Hostx64/x64"
+<         PATH="${PATH}:${VCINSTALLDIR}/Tools/MSVC/${VCVER}/bin/Hostx64/x86"
+---
+>         PATH="${VCINSTALLDIR}/Tools/MSVC/${VCVER}/bin/Hostx64/x64:${PATH}"
+>         PATH="${VCINSTALLDIR}/Tools/MSVC/${VCVER}/bin/Hostx64/x86:${PATH}"
+81c82,83
+<     PATH="${PATH}:${VCINSTALLDIR}/Tools/MSVC/${VCVER}/bin/Host${m}/${m}"
+---
+>     # link is conflict with /usr/bin/link , so VC path should be earlier in PATH
+>     PATH="${VCINSTALLDIR}/Tools/MSVC/${VCVER}/bin/Host${m}/${m}:${PATH}"

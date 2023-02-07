@@ -1,0 +1,6 @@
+199,200c199,200
+<       with open(our_manifest, 'r') as our_f:
+<         with open(assert_manifest, 'r') as assert_f:
+---
+>       with open(our_manifest, 'r',encoding="utf-8") as our_f:
+>         with open(assert_manifest, 'r', encoding="utf-8") as assert_f:
