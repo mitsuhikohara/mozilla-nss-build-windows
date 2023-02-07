@@ -1,0 +1,6 @@
+73c73,75
+< if [ "${platform%-*}" = "MINGW32_NT" -o "${platform%-*}" = "MINGW64_NT" ]; then
+---
+> # platform format is updated eg) MINGW64_NT-10.0-22621
+> # "${platform%-*}" ==> "${platform%-*-*}"
+> if [ "${platform%-*-*}" = "MINGW32_NT" -o "${platform%-*-*}" = "MINGW64_NT" ]; then
